@@ -17,16 +17,21 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>Archive: 2023/8 | Hexo</title>
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Stephen.Y">
-<meta property="og:url" content="http://example.com/archives/2023/08/index.html">
+  <title>UserCF[recommended algorithm] | Hexo</title>
+  <meta name="description" content="User-based Collaborative Filtering (UserCF)User-based Collaborative Filtering (UserCF) is one of the primary methods in collaborative filtering, a popular technique for building recommendation systems">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UserCF[recommended algorithm]">
+<meta property="og:url" content="http://example.com/2023/08/13/UserCF/index.html">
 <meta property="og:site_name" content="Stephen.Y">
+<meta property="og:description" content="User-based Collaborative Filtering (UserCF)User-based Collaborative Filtering (UserCF) is one of the primary methods in collaborative filtering, a popular technique for building recommendation systems">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-08-13T13:12:25.000Z">
+<meta property="article:modified_time" content="2023-08-13T15:16:08.312Z">
 <meta property="article:author" content="Stephen Ying">
+<meta property="article:tag" content="recommended algorithm">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://example.com/archives/2023/08/index.html">
+  <link rel="canonical" href="http://example.com/2023/08/13/UserCF/index.html">
   
     <link rel="alternate" href="/atom.xml" title="Stephen.Y" type="application/atom+xml">
   
@@ -305,68 +310,199 @@
   
   
 <main class="main" role="main">
-  	<article class="content article article-archives article-type-list" itemscope="">
-	    <header class="article-header">
-	      <h1 itemprop="title">Archive: 2023/8</h1>
-	      <p class="text-muted">Total 3 articles</p>
-	    </header>
-	    <div class="article-body">
-	      
+  <div class="content">
+  <article id="default-UserCF" class="article article-type-default" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
   
+    <h1 class="article-title" itemprop="name">
+      UserCF[recommended algorithm]
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2023/08/13/UserCF/" class="article-date">
+	  <time datetime="2023-08-13T13:12:25.000Z" itemprop="datePublished">2023-08-13</time>
+	</a>
+</span>
+        
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/recommended-algorithm/" rel="tag">recommended algorithm</a>
+  </span>
+
+
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2023/08/13/UserCF/#comments" class="article-comment-link">Comments</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h1 id="User-based-Collaborative-Filtering-UserCF"><a href="#User-based-Collaborative-Filtering-UserCF" class="headerlink" title="User-based Collaborative Filtering (UserCF)"></a>User-based Collaborative Filtering (UserCF)</h1><p>User-based Collaborative Filtering (UserCF) is one of the primary methods in collaborative filtering, a popular technique for building recommendation systems. Collaborative filtering is rooted in the idea that users who have agreed in the past will agree in the future about the preference for certain items.</p>
+<h2 id="How-UserCF-Works"><a href="#How-UserCF-Works" class="headerlink" title="How UserCF Works"></a>How UserCF Works</h2><ol>
+<li><p><strong>User Similarity Calculation</strong>:</p>
+<ul>
+<li>Calculate how similar each user is to every other user. This is typically determined using a similarity metric like Pearson correlation, cosine similarity, or Jaccard similarity.</li>
+<li>For a user <code>u</code> and another user <code>v</code>, similarity might be computed based on their shared item ratings.</li>
+</ul>
+</li>
+<li><p><strong>Finding Neighbors</strong>:</p>
+<ul>
+<li>After computing similarities, identify the <code>k</code> most similar users (or neighbors) for each user.</li>
+</ul>
+</li>
+<li><p><strong>Predicting Ratings</strong>:</p>
+<ul>
+<li>Predict the rating of a user <code>u</code> for an item <code>i</code> by aggregating the ratings of the <code>k</code> neighbors for that item. Ratings are usually weighted by the similarity between user <code>u</code> and each of the neighbors. The weighted sum can then be normalized to derive the predicted rating.</li>
+</ul>
+</li>
+<li><p><strong>Recommendation</strong>:</p>
+<ul>
+<li>Rank items based on the predicted ratings for unseen items, and then recommend the top-N items to the user.</li>
+</ul>
+</li>
+</ol>
+<h2 id="Advantages-of-UserCF"><a href="#Advantages-of-UserCF" class="headerlink" title="Advantages of UserCF"></a>Advantages of UserCF</h2><ol>
+<li><strong>Interpretable</strong>: Recommendations can be easily explained. For instance: “We’re recommending this movie because users similar to you also enjoyed these other movies…”</li>
+<li><strong>No Need for Item Metadata</strong>: UserCF operates solely on user-item interaction data, without relying on item attributes or content.</li>
+</ol>
+<h2 id="Disadvantages-of-UserCF"><a href="#Disadvantages-of-UserCF" class="headerlink" title="Disadvantages of UserCF"></a>Disadvantages of UserCF</h2><ol>
+<li><strong>Scalability</strong>: Computing pairwise similarities can be computationally challenging as the number of users grows.</li>
+<li><strong>Sparsity</strong>: User-item matrices are typically sparse, which means most users have only rated a fraction of the total items. This can make finding relevant neighbors difficult.</li>
+<li><strong>Cold Start</strong>: New users with minimal interaction history pose a challenge, as finding similar users or making reliable recommendations becomes difficult.</li>
+</ol>
+<p>In summary, while UserCF is effective in various scenarios, especially when the number of users isn’t extremely large, alternative methods like Item-based Collaborative Filtering, matrix factorization techniques like Singular Value Decomposition (SVD), or recent deep learning techniques might be more suitable for larger-scale applications.</p>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://example.com/2023/08/13/UserCF/" title="UserCF[recommended algorithm]" target="_blank" rel="external">http://example.com/2023/08/13/UserCF/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/cofess" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/cofess" target="_blank"><span class="text-dark">昵称</span><small class="ml-1x">Web Developer &amp; Designer</small></a></h3>
+        <div>个人简介。</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
   
     
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
     
-      
-      
-      <section class="panel panel-default b-no">
-        <div class="panel-heading" role="tab">
-          <h3 class="panel-title">
-            <a data-toggle="collapse" href="#collapse2023" aria-expanded="true">
-              <i class="icon icon-calendar-plus text-active"></i><i class="icon icon-calendar-minus text"></i>
-              2023
-            </a>
-            <!-- <a href="/archives/2023" class="archive-year">2023</a> -->
-          </h3>
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/2023/08/13/hello-world/" title="Hello World"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;Newer</span></a>
+    </li>
+    
+    
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>$</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>Maybe you could buy me a cup of coffee.</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="/images/donate/alipayimg.png" alt="Scan Qrcode" title="Scan" />
+              </div>
+              <p class="text-muted mv">Scan this qrcode</p>
+              <p class="text-grey">Open alipay app scan this qrcode, buy me a coffee!</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="/images/donate/wechatpayimg.png" alt="Scan Qrcode" title="Scan" />
+              </div>
+              <p class="text-muted mv">Scan this qrcode</p>
+              <p class="text-grey">Open wechat app scan this qrcode, buy me a coffee!</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> alipay</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> wechat payment</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div id="collapse2023" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading2023">
-        <div class="panel-body">
-          <div class="collection">
-    
-    
-<a href="/2023/08/13/ItemCF/" class="collection-item"   itemprop="url">
-  <time datetime="2023-08-13T15:16:08.306Z" itemprop="datePublished">2023-08-13</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> 
-</a>
+      </div>
+    </div>
+  </div>
+</div>
 
 
-  
-    
-    
-    
-<a href="/2023/08/13/hello-world/" class="collection-item"   itemprop="url">
-  <time datetime="2023-08-13T15:05:11.882Z" itemprop="datePublished">2023-08-13</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> Hello World
-</a>
 
-
-  
-    
-    
-    
-<a href="/2023/08/13/UserCF/" class="collection-item"   itemprop="url">
-  <time datetime="2023-08-13T13:12:25.000Z" itemprop="datePublished">2023-08-13</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> UserCF[recommended algorithm]
-</a>
-
-
-  
-  
-    </div></div></div></section>
-  
-
-	    </div>
-  	</article>
-  	 	
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -427,6 +563,37 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
+
+   
+
+
+
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: '',
+    appKey: '',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+  </script>
+
+     
 
 
 
