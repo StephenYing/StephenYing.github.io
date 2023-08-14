@@ -17,21 +17,21 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>UserCF | StephenYing.site</title>
-  <meta name="description" content="User-based Collaborative Filtering (UserCF)User-based Collaborative Filtering (UserCF) is one of the primary methods in collaborative filtering, a popular technique for building recommendation systems">
+  <title>Matrix-Factorization used in Recommended Algorithm | StephenYing.site</title>
+  <meta name="description" content="Matrix Factorization in Recommendation SystemsMatrix Factorization is a technique commonly employed in recommendation systems. It works by decomposing a large user-item interaction matrix into multipl">
 <meta property="og:type" content="article">
-<meta property="og:title" content="UserCF">
-<meta property="og:url" content="http://example.com/2023/08/13/UserCF/index.html">
+<meta property="og:title" content="Matrix-Factorization used in Recommended Algorithm">
+<meta property="og:url" content="http://example.com/2023/08/14/Matrix-Factorization/index.html">
 <meta property="og:site_name" content="Stephen.Y">
-<meta property="og:description" content="User-based Collaborative Filtering (UserCF)User-based Collaborative Filtering (UserCF) is one of the primary methods in collaborative filtering, a popular technique for building recommendation systems">
+<meta property="og:description" content="Matrix Factorization in Recommendation SystemsMatrix Factorization is a technique commonly employed in recommendation systems. It works by decomposing a large user-item interaction matrix into multipl">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-08-13T13:12:25.000Z">
-<meta property="article:modified_time" content="2023-08-13T23:38:40.279Z">
+<meta property="article:published_time" content="2023-08-13T23:56:46.000Z">
+<meta property="article:modified_time" content="2023-08-14T00:05:10.348Z">
 <meta property="article:author" content="Stephen Ying">
 <meta property="article:tag" content="recommended algorithm">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://example.com/2023/08/13/UserCF/index.html">
+  <link rel="canonical" href="http://example.com/2023/08/14/Matrix-Factorization/index.html">
   
     <link rel="alternate" href="/atom.xml" title="Stephen.Y" type="application/atom+xml">
   
@@ -341,14 +341,14 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="default-UserCF" class="article article-type-default" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-Matrix-Factorization" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      UserCF
+      Matrix-Factorization used in Recommended Algorithm
     </h1>
   
 
@@ -356,8 +356,8 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/2023/08/13/UserCF/" class="article-date">
-	  <time datetime="2023-08-13T13:12:25.000Z" itemprop="datePublished">2023-08-13</time>
+	<a href="/2023/08/14/Matrix-Factorization/" class="article-date">
+	  <time datetime="2023-08-13T23:56:46.000Z" itemprop="datePublished">2023-08-14</time>
 	</a>
 </span>
         
@@ -370,46 +370,70 @@
 
         
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2023/08/13/UserCF/#comments" class="article-comment-link">Comments</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2023/08/14/Matrix-Factorization/#comments" class="article-comment-link">Comments</a></span>
         
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h1 id="User-based-Collaborative-Filtering-UserCF"><a href="#User-based-Collaborative-Filtering-UserCF" class="headerlink" title="User-based Collaborative Filtering (UserCF)"></a>User-based Collaborative Filtering (UserCF)</h1><p>User-based Collaborative Filtering (UserCF) is one of the primary methods in collaborative filtering, a popular technique for building recommendation systems. Collaborative filtering is rooted in the idea that users who have agreed in the past will agree in the future about the preference for certain items.</p>
-<h2 id="How-UserCF-Works"><a href="#How-UserCF-Works" class="headerlink" title="How UserCF Works"></a>How UserCF Works</h2><ol>
-<li><p><strong>User Similarity Calculation</strong>:</p>
+        <h1 id="Matrix-Factorization-in-Recommendation-Systems"><a href="#Matrix-Factorization-in-Recommendation-Systems" class="headerlink" title="Matrix Factorization in Recommendation Systems"></a>Matrix Factorization in Recommendation Systems</h1><p>Matrix Factorization is a technique commonly employed in recommendation systems. It works by decomposing a large user-item interaction matrix into multiple smaller matrices, capturing latent factors or hidden features of the data. The goal is to approximate the original matrix and predict missing or future interactions between users and items.</p>
+<h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>In the context of recommendation systems, consider a matrix where:</p>
 <ul>
-<li>Calculate how similar each user is to every other user. This is typically determined using a similarity metric like Pearson correlation, cosine similarity, or Jaccard similarity.</li>
-<li>For a user <code>u</code> and another user <code>v</code>, similarity might be computed based on their shared item ratings.</li>
+<li>Rows represent users.</li>
+<li>Columns represent items.</li>
+<li>Each cell (i, j) in the matrix indicates the rating (or some form of interaction) given by user <code>i</code> to item <code>j</code>.</li>
 </ul>
-</li>
-<li><p><strong>Finding Neighbors</strong>:</p>
-<ul>
-<li>After computing similarities, identify the <code>k</code> most similar users (or neighbors) for each user.</li>
-</ul>
-</li>
-<li><p><strong>Predicting Ratings</strong>:</p>
-<ul>
-<li>Predict the rating of a user <code>u</code> for an item <code>i</code> by aggregating the ratings of the <code>k</code> neighbors for that item. Ratings are usually weighted by the similarity between user <code>u</code> and each of the neighbors. The weighted sum can then be normalized to derive the predicted rating.</li>
-</ul>
-</li>
-<li><p><strong>Recommendation</strong>:</p>
-<ul>
-<li>Rank items based on the predicted ratings for unseen items, and then recommend the top-N items to the user.</li>
-</ul>
-</li>
+<p>Many of these ratings will be missing, indicating that the user hasn’t interacted with the item yet. Matrix Factorization aims to fill in these missing values by uncovering latent features.</p>
+<h2 id="Process"><a href="#Process" class="headerlink" title="Process"></a>Process</h2><ol>
+<li><strong>Initialization</strong>: Start with two random matrices – one for users and one for items.</li>
+<li><strong>Factorization</strong>: Decompose the original user-item matrix into these two smaller matrices. These matrices represent the latent factors associated with users and items.</li>
+<li><strong>Reconstruction</strong>: Multiply the two matrices to reconstruct an approximation of the original matrix. The resulting matrix provides predicted ratings for the missing values.</li>
 </ol>
-<h2 id="Advantages-of-UserCF"><a href="#Advantages-of-UserCF" class="headerlink" title="Advantages of UserCF"></a>Advantages of UserCF</h2><ol>
-<li><strong>Interpretable</strong>: Recommendations can be easily explained. For instance: “We’re recommending this movie because users similar to you also enjoyed these other movies…”</li>
-<li><strong>No Need for Item Metadata</strong>: UserCF operates solely on user-item interaction data, without relying on item attributes or content.</li>
-</ol>
-<h2 id="Disadvantages-of-UserCF"><a href="#Disadvantages-of-UserCF" class="headerlink" title="Disadvantages of UserCF"></a>Disadvantages of UserCF</h2><ol>
-<li><strong>Scalability</strong>: Computing pairwise similarities can be computationally challenging as the number of users grows.</li>
-<li><strong>Sparsity</strong>: User-item matrices are typically sparse, which means most users have only rated a fraction of the total items. This can make finding relevant neighbors difficult.</li>
-<li><strong>Cold Start</strong>: New users with minimal interaction history pose a challenge, as finding similar users or making reliable recommendations becomes difficult.</li>
-</ol>
-<p>In summary, while UserCF is effective in various scenarios, especially when the number of users isn’t extremely large, alternative methods like Item-based Collaborative Filtering, matrix factorization techniques like Singular Value Decomposition (SVD), or recent deep learning techniques might be more suitable for larger-scale applications.</p>
+<h2 id="Techniques"><a href="#Techniques" class="headerlink" title="Techniques"></a>Techniques</h2><h3 id="1-Singular-Value-Decomposition-SVD"><a href="#1-Singular-Value-Decomposition-SVD" class="headerlink" title="1. Singular Value Decomposition (SVD)"></a>1. <strong>Singular Value Decomposition (SVD)</strong></h3><p>One of the most popular matrix factorization methods. It breaks down the original matrix into three matrices: user, singular value, and item matrices.</p>
+<h3 id="2-Alternating-Least-Squares-ALS"><a href="#2-Alternating-Least-Squares-ALS" class="headerlink" title="2. Alternating Least Squares (ALS)"></a>2. <strong>Alternating Least Squares (ALS)</strong></h3><p>Works by fixing one matrix (e.g., user) and solving for the other (e.g., item) and then alternating. It’s especially popular in collaborative filtering contexts.</p>
+<h3 id="3-Stochastic-Gradient-Descent-SGD"><a href="#3-Stochastic-Gradient-Descent-SGD" class="headerlink" title="3. Stochastic Gradient Descent (SGD)"></a>3. <strong>Stochastic Gradient Descent (SGD)</strong></h3><p>Iteratively updates the user and item matrices by minimizing the difference between the predicted and actual ratings.</p>
+<h2 id="Advantages"><a href="#Advantages" class="headerlink" title="Advantages"></a>Advantages</h2><ul>
+<li><strong>Dimensionality Reduction</strong>: Matrix Factorization captures the most important features, reducing dimensionality and noise.</li>
+<li><strong>Handling Sparsity</strong>: Can predict ratings for user-item pairs even when the original matrix is sparse.</li>
+<li><strong>Uncovering Latent Features</strong>: Helps in uncovering hidden patterns or topics in the data.</li>
+</ul>
+<h2 id="Limitations"><a href="#Limitations" class="headerlink" title="Limitations"></a>Limitations</h2><ul>
+<li><strong>Cold Start Problem</strong>: Difficult to handle new users or items that weren’t in the original matrix.</li>
+<li><strong>Scalability</strong>: Computationally intensive, especially for very large matrices.</li>
+<li><strong>Overfitting</strong>: Without regularization, can overfit to the observed data.</li>
+</ul>
+<hr>
+<p>In the world of recommendation systems, Matrix Factorization has proven to be a powerful technique, especially when combined with other methods to alleviate its limitations.</p>
+<h2 id="Matrix-Factorization-Using-scikit-surprise"><a href="#Matrix-Factorization-Using-scikit-surprise" class="headerlink" title="Matrix Factorization Using scikit-surprise"></a>Matrix Factorization Using <code>scikit-surprise</code></h2><p>Matrix Factorization is a pivotal technique in recommendation systems. This document presents a brief overview followed by Python code leveraging the <code>scikit-surprise</code> library for matrix factorization with SVD.</p>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Matrix Factorization decomposes a user-item interaction matrix to capture latent features. This aids in predicting missing or future interactions.</p>
+<ul>
+<li><p><strong>Benefits</strong>:</p>
+<ul>
+<li>Reduces dimensionality and noise.</li>
+<li>Handles sparse matrices.</li>
+<li>Uncovers latent features.</li>
+</ul>
+</li>
+<li><p><strong>Challenges</strong>:</p>
+<ul>
+<li>Cold start problem.</li>
+<li>Scalability issues.</li>
+<li>Potential overfitting.</li>
+</ul>
+</li>
+</ul>
+<h2 id="Implementing-with-scikit-surprise"><a href="#Implementing-with-scikit-surprise" class="headerlink" title="Implementing with scikit-surprise"></a>Implementing with <code>scikit-surprise</code></h2><h3 id="Setup"><a href="#Setup" class="headerlink" title="Setup:"></a>Setup:</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install scikit-surprise</span><br></pre></td></tr></table></figure>
+
+<h3 id="Sample-code"><a href="#Sample-code" class="headerlink" title="Sample code"></a>Sample code</h3><p>Using the built-in Movielens dataset:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">from surprise import SVD</span><br><span class="line">from surprise import Dataset</span><br><span class="line">from surprise.model_selection import train_test_split</span><br><span class="line">from surprise import accuracy</span><br><span class="line"></span><br><span class="line"># Load dataset</span><br><span class="line">data = Dataset.load_builtin(&#x27;ml-100k&#x27;)</span><br><span class="line"></span><br><span class="line"># Data split</span><br><span class="line">trainset, testset = train_test_split(data, test_size=0.25)</span><br><span class="line"></span><br><span class="line"># Train model</span><br><span class="line">model = SVD()</span><br><span class="line">model.fit(trainset)</span><br><span class="line"></span><br><span class="line"># Test predictions</span><br><span class="line">predictions = model.test(testset)</span><br><span class="line"></span><br><span class="line"># Calculate RMSE</span><br><span class="line">rmse = accuracy.rmse(predictions)</span><br><span class="line">print(f&#x27;RMSE: &#123;rmse&#125;&#x27;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Interpretation"><a href="#Interpretation" class="headerlink" title="Interpretation:"></a>Interpretation:</h2><ul>
+<li><strong>SVD()</strong>: Initializes the SVD algorithm.</li>
+<li><strong>fit()</strong>: Model training.</li>
+<li><strong>test()</strong>: Generates model predictions.</li>
+<li><strong>rmse()</strong>: Measures prediction accuracy.</li>
+</ul>
+<p>Fine-tuning parameters and using advanced validation techniques can enhance the model’s accuracy.</p>
 
       
     </div>
@@ -419,7 +443,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="http://example.com/2023/08/13/UserCF/" title="UserCF" target="_blank" rel="external">http://example.com/2023/08/13/UserCF/</a>
+      <a href="http://example.com/2023/08/14/Matrix-Factorization/" title="Matrix-Factorization used in Recommended Algorithm" target="_blank" rel="external">http://example.com/2023/08/14/Matrix-Factorization/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -465,13 +489,9 @@
   
   <ul class="pager pull-left">
     
-    <li class="prev">
-      <a href="/2023/08/13/ItemCF/" title="ItemCF"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;Newer</span></a>
-    </li>
-    
     
     <li class="next">
-      <a href="/2023/08/12/Algorithm/" title="Introduction to Recommended Algorithm"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/2023/08/14/Methods/" title="Hybrid Methods in Recommended Algorithm"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
