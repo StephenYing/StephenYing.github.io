@@ -17,21 +17,20 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>ItemCF | StephenYing.site</title>
-  <meta name="description" content="ItemCF: Item-based Collaborative FilteringCollaborative Filtering (CF) is a technique used in recommendation systems where patterns are discovered by observing the preferences or behaviors of users. C">
+  <title>Association Rule Mining in Recommendation Systems | StephenYing.site</title>
+  <meta name="description" content="Association Rule Mining in Recommendation SystemsAssociation Rule Mining (ARM) is a technique used to discover relationships or associations between variables in large datasets. In the context of reco">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ItemCF">
-<meta property="og:url" content="http://example.com/2023/08/13/ItemCF/index.html">
+<meta property="og:title" content="Association Rule Mining in Recommendation Systems">
+<meta property="og:url" content="http://example.com/2023/08/14/Association-Rule-Mining-in-Recommendation-Systems/index.html">
 <meta property="og:site_name" content="Stephen.Y">
-<meta property="og:description" content="ItemCF: Item-based Collaborative FilteringCollaborative Filtering (CF) is a technique used in recommendation systems where patterns are discovered by observing the preferences or behaviors of users. C">
+<meta property="og:description" content="Association Rule Mining in Recommendation SystemsAssociation Rule Mining (ARM) is a technique used to discover relationships or associations between variables in large datasets. In the context of reco">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-08-13T15:44:59.000Z">
-<meta property="article:modified_time" content="2023-08-13T23:38:21.766Z">
+<meta property="article:published_time" content="2023-08-14T10:27:23.000Z">
+<meta property="article:modified_time" content="2023-08-14T10:33:04.041Z">
 <meta property="article:author" content="Stephen Ying">
-<meta property="article:tag" content="recommended algorithm">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://example.com/2023/08/13/ItemCF/index.html">
+  <link rel="canonical" href="http://example.com/2023/08/14/Association-Rule-Mining-in-Recommendation-Systems/index.html">
   
     <link rel="alternate" href="/atom.xml" title="Stephen.Y" type="application/atom+xml">
   
@@ -341,14 +340,14 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-ItemCF" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-Association-Rule-Mining-in-Recommendation-Systems" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      ItemCF
+      Association Rule Mining in Recommendation Systems
     </h1>
   
 
@@ -356,55 +355,44 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/2023/08/13/ItemCF/" class="article-date">
-	  <time datetime="2023-08-13T15:44:59.000Z" itemprop="datePublished">2023-08-13</time>
+	<a href="/2023/08/14/Association-Rule-Mining-in-Recommendation-Systems/" class="article-date">
+	  <time datetime="2023-08-14T10:27:23.000Z" itemprop="datePublished">2023-08-14</time>
 	</a>
 </span>
         
         
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>
-	<a class="article-tag-link-link" href="/tags/recommended-algorithm/" rel="tag">recommended algorithm</a>
-  </span>
-
 
         
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2023/08/13/ItemCF/#comments" class="article-comment-link">Comments</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2023/08/14/Association-Rule-Mining-in-Recommendation-Systems/#comments" class="article-comment-link">Comments</a></span>
         
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h1 id="ItemCF-Item-based-Collaborative-Filtering"><a href="#ItemCF-Item-based-Collaborative-Filtering" class="headerlink" title="ItemCF: Item-based Collaborative Filtering"></a>ItemCF: Item-based Collaborative Filtering</h1><p>Collaborative Filtering (CF) is a technique used in recommendation systems where patterns are discovered by observing the preferences or behaviors of users. CF operates under the assumption that if two users agree on one issue, they will likely agree on others as well.</p>
-<h2 id="Overview-of-Item-based-Collaborative-Filtering"><a href="#Overview-of-Item-based-Collaborative-Filtering" class="headerlink" title="Overview of Item-based Collaborative Filtering"></a>Overview of Item-based Collaborative Filtering</h2><p>While user-based CF focuses on finding similar users to make recommendations, Item-based CF focuses on finding similar items.</p>
-<p><strong>Working Principle:</strong> If a user A likes item X and item Y, and another user B likes item X, then it is likely that user B will like item Y too.</p>
-<h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps:"></a>Steps:</h3><ol>
-<li><p><strong>Compute the similarity</strong> between items based on user preferences or ratings. A common similarity measure is the cosine similarity or Pearson correlation.</p>
-</li>
-<li><p>For a user, find the items they have interacted with (e.g., liked, purchased, or rated).</p>
-</li>
-<li><p>For each item the user hasn’t interacted with, predict a score based on its similarity to the items the user has interacted with.</p>
-</li>
-<li><p>Recommend the items with the highest predicted scores.</p>
-</li>
-</ol>
-<h2 id="Advantages-of-ItemCF"><a href="#Advantages-of-ItemCF" class="headerlink" title="Advantages of ItemCF"></a>Advantages of ItemCF</h2><ul>
-<li><p><strong>Stability</strong>: Items usually don’t change their characteristics frequently. So, the similarity between items remains relatively stable over time, which can result in more stable recommendations.</p>
-</li>
-<li><p><strong>Scalability</strong>: Since items don’t change frequently, precomputed item-item matrices can be used to look up and recommend in real-time.</p>
-</li>
-<li><p><strong>Interpretability</strong>: It’s relatively easier to explain recommendations based on item similarity (e.g., “You might like this book because you liked that other book”).</p>
-</li>
+        <h1 id="Association-Rule-Mining-in-Recommendation-Systems"><a href="#Association-Rule-Mining-in-Recommendation-Systems" class="headerlink" title="Association Rule Mining in Recommendation Systems"></a>Association Rule Mining in Recommendation Systems</h1><p>Association Rule Mining (ARM) is a technique used to discover relationships or associations between variables in large datasets. In the context of recommendation systems, it’s used to find patterns or combinations of items that frequently co-occur in transactions.</p>
+<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>Association rules are often used in market-basket analysis to identify products that are frequently bought together. This has become synonymous with the “Customers who bought this item also bought…” recommendation in e-commerce systems.</p>
+<h2 id="Key-Concepts"><a href="#Key-Concepts" class="headerlink" title="Key Concepts"></a>Key Concepts</h2><h3 id="1-Support"><a href="#1-Support" class="headerlink" title="1. Support"></a>1. <strong>Support</strong></h3><p>The proportion of transactions in the dataset that contain a particular item or combination of items.</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Support(X) = Transactions containing X / Total Transactions</span><br></pre></td></tr></table></figure>
+<h3 id="2-Confidence"><a href="#2-Confidence" class="headerlink" title="2. Confidence"></a>2. <strong>Confidence</strong></h3><p>The probability of seeing the consequent (Y) given the antecedent (X).</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Confidence(X -&gt; Y) = (Transactions containing both X and Y) / (Transactions containing X)</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="3-Lift"><a href="#3-Lift" class="headerlink" title="3. Lift"></a>3. <strong>Lift</strong></h3><p>Measures how much more often X and Y occur together than expected if they were statistically independent.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Lift(X -&gt; Y) = Confidence(X -&gt; Y) / Support(Y)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Apriori-Algorithm"><a href="#Apriori-Algorithm" class="headerlink" title="Apriori Algorithm"></a><strong>Apriori Algorithm</strong></h2><p>One of the most popular algorithms for Association Rule Mining is the Apriori algorithm. It operates in two steps:</p>
+<ul>
+<li>Frequent Itemset Generation: Identify itemsets in the dataset with a support greater than the specified minimum support.</li>
+<li>Rule Generation: Generate association rules from the frequent itemsets such that these rules meet the minimum confidence threshold.</li>
 </ul>
-<h2 id="Disadvantages"><a href="#Disadvantages" class="headerlink" title="Disadvantages"></a>Disadvantages</h2><ul>
-<li><p><strong>Cold-start problem for new items</strong>: Until an item has been rated by a substantial number of users, it’s hard to find its similarities with other items.</p>
-</li>
-<li><p><strong>Diversity</strong>: If not implemented carefully, item-based CF can end up recommending very similar items, thereby reducing the diversity of recommendations.</p>
-</li>
+<h1 id="Advantages-of-Association-Rule-Mining"><a href="#Advantages-of-Association-Rule-Mining" class="headerlink" title="Advantages of Association Rule Mining"></a><strong>Advantages of Association Rule Mining</strong></h1><p>Simplicity: The rules generated are easy to understand and can be interpreted without specialized knowledge.<br>Flexibility: Can be applied to any transaction dataset, not just market baskets.<br>Insights: Provides clear insights into product associations, which can be valuable for store layouts, promotions, and cross-selling strategies.</p>
+<h1 id="Limitations"><a href="#Limitations" class="headerlink" title="Limitations"></a><strong>Limitations</strong></h1><ul>
+<li>Scalability: The Apriori algorithm, in particular, can be computationally expensive with large datasets.</li>
+<li>Sparse Datasets: In cases where transaction data is sparse, generating meaningful rules can be challenging.</li>
+<li>Static: Doesn’t handle evolving tastes or trends over time unless the dataset is frequently updated.</li>
 </ul>
-<h2 id="Applications"><a href="#Applications" class="headerlink" title="Applications"></a>Applications</h2><p>ItemCF is widely used in e-commerce, movie recommendations, music platforms, and more. For instance, a statement like “Users who bought this also bought these” on an online shopping site is often the result of item-based CF.</p>
-<h2 id="Extensions"><a href="#Extensions" class="headerlink" title="Extensions"></a>Extensions</h2><p>Advanced versions of ItemCF might incorporate other data, like content features (e.g., the genre of a movie or the author of a book) to improve recommendation quality. In practice, recommendation systems might blend results from several algorithms, including ItemCF, to achieve optimal performance.</p>
+<h1 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a><strong>Conclusion</strong></h1><p>Association Rule Mining offers an intuitive and straightforward approach to generating recommendations. While it might not have the sophistication or personalization of more advanced techniques, its transparency and ease of interpretation make it a valuable tool, especially for retailers and e-commerce platforms.</p>
 
       
     </div>
@@ -414,7 +402,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="http://example.com/2023/08/13/ItemCF/" title="ItemCF" target="_blank" rel="external">http://example.com/2023/08/13/ItemCF/</a>
+      <a href="http://example.com/2023/08/14/Association-Rule-Mining-in-Recommendation-Systems/" title="Association Rule Mining in Recommendation Systems" target="_blank" rel="external">http://example.com/2023/08/14/Association-Rule-Mining-in-Recommendation-Systems/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -460,13 +448,9 @@
   
   <ul class="pager pull-left">
     
-    <li class="prev">
-      <a href="/2023/08/14/Content-Based_Filtering/" title="Content-Based Filtering"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;Newer</span></a>
-    </li>
-    
     
     <li class="next">
-      <a href="/2023/08/13/UserCF/" title="UserCF"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/2023/08/14/Deep-Learning-in-Recommendation-Systems/" title="Deep Learning in Recommendation Systems"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
