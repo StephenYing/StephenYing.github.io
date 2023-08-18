@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-08-17T10:29:07.655Z</updated>
+  <updated>2023-08-18T01:04:27.021Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,24 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Time-complexity-for-CNN</title>
+    <link href="http://example.com/2023/08/18/Time-complexity-for-CNN/"/>
+    <id>http://example.com/2023/08/18/Time-complexity-for-CNN/</id>
+    <published>2023-08-18T01:04:27.000Z</published>
+    <updated>2023-08-18T01:04:27.021Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>ResNet Model in Pytorch</title>
     <link href="http://example.com/2023/08/17/ResNet-Model-in-Pytorch-0/"/>
     <id>http://example.com/2023/08/17/ResNet-Model-in-Pytorch-0/</id>
     <published>2023-08-17T10:03:01.000Z</published>
-    <updated>2023-08-17T10:29:07.655Z</updated>
+    <updated>2023-08-18T01:05:02.636Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Resnet-Model-in-Pytorch"><a href="#Resnet-Model-in-Pytorch" class="headerlink" title="Resnet Model in Pytorch"></a>Resnet Model in Pytorch</h1><h2 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h2><p>During using the pytorch in traing&#x2F;designing model, specifically using ‘torchvision.models’, there are several models can be used in this package. For ResNet in this package, several kind of ResNets i.e.(<code>ResNet18</code>, <code>ResNet34</code>, <code>ResNet50</code>, <code>ResNet101</code>, <code>ResNet152</code>) are included to satisfy our need Which can be used to instantiate a ResNet model.</p><p>The motivation for this post is that there are several kind of ResNet, understanidng them will enable us to use them more efficiently.</p><p>In this post we will claim why they called <code>ResNetn</code> and how to use them in pytorch.</p><h2 id="Why-‘ResNet18‘-is-‘18‘"><a href="#Why-‘ResNet18‘-is-‘18‘" class="headerlink" title="Why ‘ResNet18‘ is ‘18‘"></a>Why ‘<code>ResNet18</code>‘ is ‘<code>18</code>‘</h2><p>18 &#x3D; 17 (convolutional layer) + 1 (fully connected)<br>18 mainly means there are 18 steps with weights, including convolutional and fully connected layers, excluding pooling and BN layers. (even if the BN layer is parameterised)</p><p>let’s see how is counts based on the graph of ResNet18:</p><img src="/2023/08/17/ResNet-Model-in-Pytorch-0/ResNet18.png" class=""><p>As seen in the graph above, for each <code>Basic block</code> we have two convolution layer. Therefore when we count the number of convolutional layer, it should be the number of <code>Basic blocks</code> * 2.</p><p>And by summing the convolution layer before the Max pooling and the fully connected layer used for output, the result is 8*2+2&#x3D;18, which leads to <code>ResNet18</code></p><h2 id="The-structure-of-those-ResNet"><a href="#The-structure-of-those-ResNet" class="headerlink" title="The structure of those ResNet"></a>The structure of those ResNet</h2><p>Here I post the structure list in Kaiming.H’s paper called ‘Deep Residual Learning for Image Recognition’<br>arxiv link: <a href="https://arxiv.org/abs/1512.03385">https://arxiv.org/abs/1512.03385</a></p><img src="/2023/08/17/ResNet-Model-in-Pytorch-0/ResNet18_para.png" class=""><p>and in this structure list, for those we can easily calculate why they called 34,50,101,152.</p><p>For example, for <code>ResNet50</code>, 50 &#x3D; 3*(3+4+6+3)+2, where 3 comes from the basic block in ResNet50 have 3 convolution with filter <code>1*1</code>, <code>3*3</code>,<code>1*1</code> respectively.</p><p>Check the form for 101 and 152 by yourself!</p><h2 id="How-to-use-them-with-torchvision-model"><a href="#How-to-use-them-with-torchvision-model" class="headerlink" title="How to use them with torchvision.model"></a>How to use them with <code>torchvision.model</code></h2>]]></content>
     
@@ -34,6 +47,8 @@
     
     
     
+    <category term="ResNet,CNN" scheme="http://example.com/tags/ResNet-CNN/"/>
+    
   </entry>
   
   <entry>
@@ -41,7 +56,7 @@
     <link href="http://example.com/2023/08/17/Hexo-post-with-pic/"/>
     <id>http://example.com/2023/08/17/Hexo-post-with-pic/</id>
     <published>2023-08-17T03:51:56.000Z</published>
-    <updated>2023-08-17T17:08:40.211Z</updated>
+    <updated>2023-08-18T01:04:47.291Z</updated>
     
     <content type="html"><![CDATA[<h1 id="How-to-insert-images-into-hexo-blogs"><a href="#How-to-insert-images-into-hexo-blogs" class="headerlink" title="How to insert images into hexo blogs"></a>How to insert images into hexo blogs</h1><h2 id="Method-Hexo-built-in"><a href="#Method-Hexo-built-in" class="headerlink" title="Method(Hexo built in)"></a>Method(Hexo built in)</h2><p>source：<a href="https://hexo.io/docs/asset-folders">https://hexo.io/docs/asset-folders</a></p><p>As we all know, the syntax for inserting an image into an md file is <code>! []()</code> in .md file, However, there are some difference between markdown and .md runs in Hexo.</p><p>There are two necessary steps for using the exist stuffs to enable the image insertation.</p><h3 id="Step1-enable-post-asset-folder"><a href="#Step1-enable-post-asset-folder" class="headerlink" title="Step1: enable post asset folder"></a>Step1: enable post asset folder</h3><p>In <code>_config.yml</code>, find and let <code>post_asset_folder: true</code>.<br>Then if now you use <code>hexo new &#39;filename&#39;</code>, a folder with same name ‘filename’ can be found in source&#x2F;_posts, you can store the image you want to use in next step.</p><h3 id="Step2-insert-image-into-post"><a href="#Step2-insert-image-into-post" class="headerlink" title="Step2: insert image into post"></a>Step2: insert image into post</h3><p><code>&#123;% asset_img 'filename' 'description' %&#125;</code></p><p>You can substitute the filename and description,</p><p>i.e.<code>&#123;% asset_img image.jpg this is an image %&#125;</code></p>]]></content>
     
@@ -53,6 +68,8 @@
     
     
     
+    
+    <category term="Hexo" scheme="http://example.com/tags/Hexo/"/>
     
   </entry>
   
