@@ -18,12 +18,12 @@
   
   
   <title>Matrix-Factorization used in Recommended Algorithm | StephenYing.site</title>
-  <meta name="description" content="Matrix Factorization in Recommendation SystemsMatrix Factorization is a technique commonly employed in recommendation systems. It works by decomposing a large user-item interaction matrix into multipl">
+  <meta name="description" content="Matrix Factorization in Recommendation Systems Matrix Factorization is a technique commonly employed in recommendation systems. It works by decomposing a large user-item interaction matrix into multi">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Matrix-Factorization used in Recommended Algorithm">
 <meta property="og:url" content="http://example.com/2023/08/14/Matrix-Factorization/index.html">
 <meta property="og:site_name" content="Stephen.Y">
-<meta property="og:description" content="Matrix Factorization in Recommendation SystemsMatrix Factorization is a technique commonly employed in recommendation systems. It works by decomposing a large user-item interaction matrix into multipl">
+<meta property="og:description" content="Matrix Factorization in Recommendation Systems Matrix Factorization is a technique commonly employed in recommendation systems. It works by decomposing a large user-item interaction matrix into multi">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-08-13T16:56:46.000Z">
 <meta property="article:modified_time" content="2023-08-14T00:05:10.348Z">
@@ -45,7 +45,11 @@
   
   
   
-<meta name="generator" content="Hexo 6.3.0"></head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
 
 
 <body class="main-center" itemscope itemtype="http://schema.org/WebPage">
@@ -222,7 +226,7 @@
   <div class="widget">
     <h3 class="widget-title">Tags</h3>
     <div class="widget-body">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ResNet-CNN/" rel="tag">ResNet,CNN</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/recommended-algorithm/" rel="tag">recommended algorithm</a><span class="tag-list-count">9</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CNN/" rel="tag">CNN</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ResNet-CNN/" rel="tag">ResNet, CNN</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/recommended-algorithm/" rel="tag">recommended algorithm</a><span class="tag-list-count">9</span></li></ul>
     </div>
   </div>
 
@@ -232,7 +236,7 @@
   <div class="widget">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget-body tagcloud">
-      <a href="/tags/Hexo/" style="font-size: 13px;">Hexo</a> <a href="/tags/ResNet-CNN/" style="font-size: 13px;">ResNet,CNN</a> <a href="/tags/recommended-algorithm/" style="font-size: 14px;">recommended algorithm</a>
+      <a href="/tags/CNN/" style="font-size: 13px;">CNN</a> <a href="/tags/Hexo/" style="font-size: 13px;">Hexo</a> <a href="/tags/ResNet-CNN/" style="font-size: 13px;">ResNet, CNN</a> <a href="/tags/recommended-algorithm/" style="font-size: 14px;">recommended algorithm</a>
     </div>
   </div>
 
@@ -260,7 +264,7 @@
                 
               </p>
               <p class="item-title">
-                <a href="/2023/08/18/Time-complexity-for-CNN/" class="title">Time-complexity-for-CNN</a>
+                <a href="/2023/08/18/Time-complexity-for-CNN/" class="title">Complexity for CNN Models</a>
               </p>
               <p class="item-date">
                 <time datetime="2023-08-18T01:04:27.000Z" itemprop="datePublished">2023-08-18</time>
@@ -376,45 +380,58 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h1 id="Matrix-Factorization-in-Recommendation-Systems"><a href="#Matrix-Factorization-in-Recommendation-Systems" class="headerlink" title="Matrix Factorization in Recommendation Systems"></a>Matrix Factorization in Recommendation Systems</h1><p>Matrix Factorization is a technique commonly employed in recommendation systems. It works by decomposing a large user-item interaction matrix into multiple smaller matrices, capturing latent factors or hidden features of the data. The goal is to approximate the original matrix and predict missing or future interactions between users and items.</p>
-<h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>In the context of recommendation systems, consider a matrix where:</p>
+        <h1 id="matrix-factorization-in-recommendation-systems"><a class="markdownIt-Anchor" href="#matrix-factorization-in-recommendation-systems"></a> Matrix Factorization in Recommendation Systems</h1>
+<p>Matrix Factorization is a technique commonly employed in recommendation systems. It works by decomposing a large user-item interaction matrix into multiple smaller matrices, capturing latent factors or hidden features of the data. The goal is to approximate the original matrix and predict missing or future interactions between users and items.</p>
+<h2 id="overview"><a class="markdownIt-Anchor" href="#overview"></a> Overview</h2>
+<p>In the context of recommendation systems, consider a matrix where:</p>
 <ul>
 <li>Rows represent users.</li>
 <li>Columns represent items.</li>
 <li>Each cell (i, j) in the matrix indicates the rating (or some form of interaction) given by user <code>i</code> to item <code>j</code>.</li>
 </ul>
 <p>Many of these ratings will be missing, indicating that the user hasn’t interacted with the item yet. Matrix Factorization aims to fill in these missing values by uncovering latent features.</p>
-<h2 id="Process"><a href="#Process" class="headerlink" title="Process"></a>Process</h2><ol>
+<h2 id="process"><a class="markdownIt-Anchor" href="#process"></a> Process</h2>
+<ol>
 <li><strong>Initialization</strong>: Start with two random matrices – one for users and one for items.</li>
 <li><strong>Factorization</strong>: Decompose the original user-item matrix into these two smaller matrices. These matrices represent the latent factors associated with users and items.</li>
 <li><strong>Reconstruction</strong>: Multiply the two matrices to reconstruct an approximation of the original matrix. The resulting matrix provides predicted ratings for the missing values.</li>
 </ol>
-<h2 id="Techniques"><a href="#Techniques" class="headerlink" title="Techniques"></a>Techniques</h2><h3 id="1-Singular-Value-Decomposition-SVD"><a href="#1-Singular-Value-Decomposition-SVD" class="headerlink" title="1. Singular Value Decomposition (SVD)"></a>1. <strong>Singular Value Decomposition (SVD)</strong></h3><p>One of the most popular matrix factorization methods. It breaks down the original matrix into three matrices: user, singular value, and item matrices.</p>
-<h3 id="2-Alternating-Least-Squares-ALS"><a href="#2-Alternating-Least-Squares-ALS" class="headerlink" title="2. Alternating Least Squares (ALS)"></a>2. <strong>Alternating Least Squares (ALS)</strong></h3><p>Works by fixing one matrix (e.g., user) and solving for the other (e.g., item) and then alternating. It’s especially popular in collaborative filtering contexts.</p>
-<h3 id="3-Stochastic-Gradient-Descent-SGD"><a href="#3-Stochastic-Gradient-Descent-SGD" class="headerlink" title="3. Stochastic Gradient Descent (SGD)"></a>3. <strong>Stochastic Gradient Descent (SGD)</strong></h3><p>Iteratively updates the user and item matrices by minimizing the difference between the predicted and actual ratings.</p>
-<h2 id="Advantages"><a href="#Advantages" class="headerlink" title="Advantages"></a>Advantages</h2><ul>
+<h2 id="techniques"><a class="markdownIt-Anchor" href="#techniques"></a> Techniques</h2>
+<h3 id="1-singular-value-decomposition-svd"><a class="markdownIt-Anchor" href="#1-singular-value-decomposition-svd"></a> 1. <strong>Singular Value Decomposition (SVD)</strong></h3>
+<p>One of the most popular matrix factorization methods. It breaks down the original matrix into three matrices: user, singular value, and item matrices.</p>
+<h3 id="2-alternating-least-squares-als"><a class="markdownIt-Anchor" href="#2-alternating-least-squares-als"></a> 2. <strong>Alternating Least Squares (ALS)</strong></h3>
+<p>Works by fixing one matrix (e.g., user) and solving for the other (e.g., item) and then alternating. It’s especially popular in collaborative filtering contexts.</p>
+<h3 id="3-stochastic-gradient-descent-sgd"><a class="markdownIt-Anchor" href="#3-stochastic-gradient-descent-sgd"></a> 3. <strong>Stochastic Gradient Descent (SGD)</strong></h3>
+<p>Iteratively updates the user and item matrices by minimizing the difference between the predicted and actual ratings.</p>
+<h2 id="advantages"><a class="markdownIt-Anchor" href="#advantages"></a> Advantages</h2>
+<ul>
 <li><strong>Dimensionality Reduction</strong>: Matrix Factorization captures the most important features, reducing dimensionality and noise.</li>
 <li><strong>Handling Sparsity</strong>: Can predict ratings for user-item pairs even when the original matrix is sparse.</li>
 <li><strong>Uncovering Latent Features</strong>: Helps in uncovering hidden patterns or topics in the data.</li>
 </ul>
-<h2 id="Limitations"><a href="#Limitations" class="headerlink" title="Limitations"></a>Limitations</h2><ul>
+<h2 id="limitations"><a class="markdownIt-Anchor" href="#limitations"></a> Limitations</h2>
+<ul>
 <li><strong>Cold Start Problem</strong>: Difficult to handle new users or items that weren’t in the original matrix.</li>
 <li><strong>Scalability</strong>: Computationally intensive, especially for very large matrices.</li>
 <li><strong>Overfitting</strong>: Without regularization, can overfit to the observed data.</li>
 </ul>
-<hr>
+<hr />
 <p>In the world of recommendation systems, Matrix Factorization has proven to be a powerful technique, especially when combined with other methods to alleviate its limitations.</p>
-<h2 id="Matrix-Factorization-Using-scikit-surprise"><a href="#Matrix-Factorization-Using-scikit-surprise" class="headerlink" title="Matrix Factorization Using scikit-surprise"></a>Matrix Factorization Using <code>scikit-surprise</code></h2><p>Matrix Factorization is a pivotal technique in recommendation systems. This document presents a brief overview followed by Python code leveraging the <code>scikit-surprise</code> library for matrix factorization with SVD.</p>
-<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Matrix Factorization decomposes a user-item interaction matrix to capture latent features. This aids in predicting missing or future interactions.</p>
+<h2 id="matrix-factorization-using-scikit-surprise"><a class="markdownIt-Anchor" href="#matrix-factorization-using-scikit-surprise"></a> Matrix Factorization Using <code>scikit-surprise</code></h2>
+<p>Matrix Factorization is a pivotal technique in recommendation systems. This document presents a brief overview followed by Python code leveraging the <code>scikit-surprise</code> library for matrix factorization with SVD.</p>
+<h2 id="introduction"><a class="markdownIt-Anchor" href="#introduction"></a> Introduction</h2>
+<p>Matrix Factorization decomposes a user-item interaction matrix to capture latent features. This aids in predicting missing or future interactions.</p>
 <ul>
-<li><p><strong>Benefits</strong>:</p>
+<li>
+<p><strong>Benefits</strong>:</p>
 <ul>
 <li>Reduces dimensionality and noise.</li>
 <li>Handles sparse matrices.</li>
 <li>Uncovers latent features.</li>
 </ul>
 </li>
-<li><p><strong>Challenges</strong>:</p>
+<li>
+<p><strong>Challenges</strong>:</p>
 <ul>
 <li>Cold start problem.</li>
 <li>Scalability issues.</li>
@@ -422,12 +439,14 @@
 </ul>
 </li>
 </ul>
-<h2 id="Implementing-with-scikit-surprise"><a href="#Implementing-with-scikit-surprise" class="headerlink" title="Implementing with scikit-surprise"></a>Implementing with <code>scikit-surprise</code></h2><h3 id="Setup"><a href="#Setup" class="headerlink" title="Setup:"></a>Setup:</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install scikit-surprise</span><br></pre></td></tr></table></figure>
-
-<h3 id="Sample-code"><a href="#Sample-code" class="headerlink" title="Sample code"></a>Sample code</h3><p>Using the built-in Movielens dataset:</p>
+<h2 id="implementing-with-scikit-surprise"><a class="markdownIt-Anchor" href="#implementing-with-scikit-surprise"></a> Implementing with <code>scikit-surprise</code></h2>
+<h3 id="setup"><a class="markdownIt-Anchor" href="#setup"></a> Setup:</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install scikit-surprise</span><br></pre></td></tr></table></figure>
+<h3 id="sample-code"><a class="markdownIt-Anchor" href="#sample-code"></a> Sample code</h3>
+<p>Using the built-in Movielens dataset:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">from surprise import SVD</span><br><span class="line">from surprise import Dataset</span><br><span class="line">from surprise.model_selection import train_test_split</span><br><span class="line">from surprise import accuracy</span><br><span class="line"></span><br><span class="line"># Load dataset</span><br><span class="line">data = Dataset.load_builtin(&#x27;ml-100k&#x27;)</span><br><span class="line"></span><br><span class="line"># Data split</span><br><span class="line">trainset, testset = train_test_split(data, test_size=0.25)</span><br><span class="line"></span><br><span class="line"># Train model</span><br><span class="line">model = SVD()</span><br><span class="line">model.fit(trainset)</span><br><span class="line"></span><br><span class="line"># Test predictions</span><br><span class="line">predictions = model.test(testset)</span><br><span class="line"></span><br><span class="line"># Calculate RMSE</span><br><span class="line">rmse = accuracy.rmse(predictions)</span><br><span class="line">print(f&#x27;RMSE: &#123;rmse&#125;&#x27;)</span><br></pre></td></tr></table></figure>
-
-<h2 id="Interpretation"><a href="#Interpretation" class="headerlink" title="Interpretation:"></a>Interpretation:</h2><ul>
+<h2 id="interpretation"><a class="markdownIt-Anchor" href="#interpretation"></a> Interpretation:</h2>
+<ul>
 <li><strong>SVD()</strong>: Initializes the SVD algorithm.</li>
 <li><strong>fit()</strong>: Model training.</li>
 <li><strong>test()</strong>: Generates model predictions.</li>

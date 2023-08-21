@@ -18,12 +18,12 @@
   
   
   <title>Association Rule Mining in Recommendation Systems | StephenYing.site</title>
-  <meta name="description" content="Association Rule Mining in Recommendation SystemsAssociation Rule Mining (ARM) is a technique used to discover relationships or associations between variables in large datasets. In the context of reco">
+  <meta name="description" content="Association Rule Mining in Recommendation Systems Association Rule Mining (ARM) is a technique used to discover relationships or associations between variables in large datasets. In the context of re">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Association Rule Mining in Recommendation Systems">
 <meta property="og:url" content="http://example.com/2023/08/14/Association-Rule-Mining-in-Recommendation-Systems/index.html">
 <meta property="og:site_name" content="Stephen.Y">
-<meta property="og:description" content="Association Rule Mining in Recommendation SystemsAssociation Rule Mining (ARM) is a technique used to discover relationships or associations between variables in large datasets. In the context of reco">
+<meta property="og:description" content="Association Rule Mining in Recommendation Systems Association Rule Mining (ARM) is a technique used to discover relationships or associations between variables in large datasets. In the context of re">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-08-14T03:27:23.000Z">
 <meta property="article:modified_time" content="2023-08-14T10:39:06.053Z">
@@ -45,7 +45,11 @@
   
   
   
-<meta name="generator" content="Hexo 6.3.0"></head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
 
 
 <body class="main-center" itemscope itemtype="http://schema.org/WebPage">
@@ -222,7 +226,7 @@
   <div class="widget">
     <h3 class="widget-title">Tags</h3>
     <div class="widget-body">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ResNet-CNN/" rel="tag">ResNet,CNN</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/recommended-algorithm/" rel="tag">recommended algorithm</a><span class="tag-list-count">9</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CNN/" rel="tag">CNN</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ResNet-CNN/" rel="tag">ResNet, CNN</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/recommended-algorithm/" rel="tag">recommended algorithm</a><span class="tag-list-count">9</span></li></ul>
     </div>
   </div>
 
@@ -232,7 +236,7 @@
   <div class="widget">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget-body tagcloud">
-      <a href="/tags/Hexo/" style="font-size: 13px;">Hexo</a> <a href="/tags/ResNet-CNN/" style="font-size: 13px;">ResNet,CNN</a> <a href="/tags/recommended-algorithm/" style="font-size: 14px;">recommended algorithm</a>
+      <a href="/tags/CNN/" style="font-size: 13px;">CNN</a> <a href="/tags/Hexo/" style="font-size: 13px;">Hexo</a> <a href="/tags/ResNet-CNN/" style="font-size: 13px;">ResNet, CNN</a> <a href="/tags/recommended-algorithm/" style="font-size: 14px;">recommended algorithm</a>
     </div>
   </div>
 
@@ -260,7 +264,7 @@
                 
               </p>
               <p class="item-title">
-                <a href="/2023/08/18/Time-complexity-for-CNN/" class="title">Time-complexity-for-CNN</a>
+                <a href="/2023/08/18/Time-complexity-for-CNN/" class="title">Complexity for CNN Models</a>
               </p>
               <p class="item-date">
                 <time datetime="2023-08-18T01:04:27.000Z" itemprop="datePublished">2023-08-18</time>
@@ -376,29 +380,38 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h1 id="Association-Rule-Mining-in-Recommendation-Systems"><a href="#Association-Rule-Mining-in-Recommendation-Systems" class="headerlink" title="Association Rule Mining in Recommendation Systems"></a>Association Rule Mining in Recommendation Systems</h1><p>Association Rule Mining (ARM) is a technique used to discover relationships or associations between variables in large datasets. In the context of recommendation systems, it’s used to find patterns or combinations of items that frequently co-occur in transactions.</p>
-<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>Association rules are often used in market-basket analysis to identify products that are frequently bought together. This has become synonymous with the “Customers who bought this item also bought…” recommendation in e-commerce systems.</p>
-<h2 id="Key-Concepts"><a href="#Key-Concepts" class="headerlink" title="Key Concepts"></a>Key Concepts</h2><h3 id="1-Support"><a href="#1-Support" class="headerlink" title="1. Support"></a>1. <strong>Support</strong></h3><p>The proportion of transactions in the dataset that contain a particular item or combination of items.</p>
+        <h1 id="association-rule-mining-in-recommendation-systems"><a class="markdownIt-Anchor" href="#association-rule-mining-in-recommendation-systems"></a> Association Rule Mining in Recommendation Systems</h1>
+<p>Association Rule Mining (ARM) is a technique used to discover relationships or associations between variables in large datasets. In the context of recommendation systems, it’s used to find patterns or combinations of items that frequently co-occur in transactions.</p>
+<h2 id="background"><a class="markdownIt-Anchor" href="#background"></a> Background</h2>
+<p>Association rules are often used in market-basket analysis to identify products that are frequently bought together. This has become synonymous with the “Customers who bought this item also bought…” recommendation in e-commerce systems.</p>
+<h2 id="key-concepts"><a class="markdownIt-Anchor" href="#key-concepts"></a> Key Concepts</h2>
+<h3 id="1-support"><a class="markdownIt-Anchor" href="#1-support"></a> 1. <strong>Support</strong></h3>
+<p>The proportion of transactions in the dataset that contain a particular item or combination of items.</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Support(X) = Transactions containing X / Total Transactions</span><br></pre></td></tr></table></figure>
-<h3 id="2-Confidence"><a href="#2-Confidence" class="headerlink" title="2. Confidence"></a>2. <strong>Confidence</strong></h3><p>The probability of seeing the consequent (Y) given the antecedent (X).</p>
+<h3 id="2-confidence"><a class="markdownIt-Anchor" href="#2-confidence"></a> 2. <strong>Confidence</strong></h3>
+<p>The probability of seeing the consequent (Y) given the antecedent (X).</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Confidence(X -&gt; Y) = (Transactions containing both X and Y) / (Transactions containing X)</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="3-Lift"><a href="#3-Lift" class="headerlink" title="3. Lift"></a>3. <strong>Lift</strong></h3><p>Measures how much more often X and Y occur together than expected if they were statistically independent.</p>
+<h3 id="3-lift"><a class="markdownIt-Anchor" href="#3-lift"></a> 3. <strong>Lift</strong></h3>
+<p>Measures how much more often X and Y occur together than expected if they were statistically independent.</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Lift(X -&gt; Y) = Confidence(X -&gt; Y) / Support(Y)</span><br></pre></td></tr></table></figure>
-
-<h2 id="Apriori-Algorithm"><a href="#Apriori-Algorithm" class="headerlink" title="Apriori Algorithm"></a><strong>Apriori Algorithm</strong></h2><p>One of the most popular algorithms for Association Rule Mining is the Apriori algorithm. It operates in two steps:</p>
+<h2 id="apriori-algorithm"><a class="markdownIt-Anchor" href="#apriori-algorithm"></a> <strong>Apriori Algorithm</strong></h2>
+<p>One of the most popular algorithms for Association Rule Mining is the Apriori algorithm. It operates in two steps:</p>
 <ul>
 <li>Frequent Itemset Generation: Identify itemsets in the dataset with a support greater than the specified minimum support.</li>
 <li>Rule Generation: Generate association rules from the frequent itemsets such that these rules meet the minimum confidence threshold.</li>
 </ul>
-<h1 id="Advantages-of-Association-Rule-Mining"><a href="#Advantages-of-Association-Rule-Mining" class="headerlink" title="Advantages of Association Rule Mining"></a><strong>Advantages of Association Rule Mining</strong></h1><p>Simplicity: The rules generated are easy to understand and can be interpreted without specialized knowledge.<br>Flexibility: Can be applied to any transaction dataset, not just market baskets.<br>Insights: Provides clear insights into product associations, which can be valuable for store layouts, promotions, and cross-selling strategies.</p>
-<h1 id="Limitations"><a href="#Limitations" class="headerlink" title="Limitations"></a><strong>Limitations</strong></h1><ul>
+<h1 id="advantages-of-association-rule-mining"><a class="markdownIt-Anchor" href="#advantages-of-association-rule-mining"></a> <strong>Advantages of Association Rule Mining</strong></h1>
+<p>Simplicity: The rules generated are easy to understand and can be interpreted without specialized knowledge.<br />
+Flexibility: Can be applied to any transaction dataset, not just market baskets.<br />
+Insights: Provides clear insights into product associations, which can be valuable for store layouts, promotions, and cross-selling strategies.</p>
+<h1 id="limitations"><a class="markdownIt-Anchor" href="#limitations"></a> <strong>Limitations</strong></h1>
+<ul>
 <li>Scalability: The Apriori algorithm, in particular, can be computationally expensive with large datasets.</li>
 <li>Sparse Datasets: In cases where transaction data is sparse, generating meaningful rules can be challenging.</li>
 <li>Static: Doesn’t handle evolving tastes or trends over time unless the dataset is frequently updated.</li>
 </ul>
-<h1 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a><strong>Conclusion</strong></h1><p>Association Rule Mining offers an intuitive and straightforward approach to generating recommendations. While it might not have the sophistication or personalization of more advanced techniques, its transparency and ease of interpretation make it a valuable tool, especially for retailers and e-commerce platforms.</p>
+<h1 id="conclusion"><a class="markdownIt-Anchor" href="#conclusion"></a> <strong>Conclusion</strong></h1>
+<p>Association Rule Mining offers an intuitive and straightforward approach to generating recommendations. While it might not have the sophistication or personalization of more advanced techniques, its transparency and ease of interpretation make it a valuable tool, especially for retailers and e-commerce platforms.</p>
 
       
     </div>

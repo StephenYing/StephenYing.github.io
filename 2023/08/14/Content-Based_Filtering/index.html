@@ -18,12 +18,12 @@
   
   
   <title>Content-Based Filtering | StephenYing.site</title>
-  <meta name="description" content="Content-Based FilteringContent-based filtering is a technique used in recommendation systems. It works by suggesting items based on a comparison between the content of the items and a user’s profile.">
+  <meta name="description" content="Content-Based Filtering Content-based filtering is a technique used in recommendation systems. It works by suggesting items based on a comparison between the content of the items and a user’s profile">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Content-Based Filtering">
 <meta property="og:url" content="http://example.com/2023/08/14/Content-Based_Filtering/index.html">
 <meta property="og:site_name" content="Stephen.Y">
-<meta property="og:description" content="Content-Based FilteringContent-based filtering is a technique used in recommendation systems. It works by suggesting items based on a comparison between the content of the items and a user’s profile.">
+<meta property="og:description" content="Content-Based Filtering Content-based filtering is a technique used in recommendation systems. It works by suggesting items based on a comparison between the content of the items and a user’s profile">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-08-13T16:49:07.000Z">
 <meta property="article:modified_time" content="2023-08-14T10:33:21.826Z">
@@ -45,7 +45,11 @@
   
   
   
-<meta name="generator" content="Hexo 6.3.0"></head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
 
 
 <body class="main-center" itemscope itemtype="http://schema.org/WebPage">
@@ -222,7 +226,7 @@
   <div class="widget">
     <h3 class="widget-title">Tags</h3>
     <div class="widget-body">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ResNet-CNN/" rel="tag">ResNet,CNN</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/recommended-algorithm/" rel="tag">recommended algorithm</a><span class="tag-list-count">9</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CNN/" rel="tag">CNN</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ResNet-CNN/" rel="tag">ResNet, CNN</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/recommended-algorithm/" rel="tag">recommended algorithm</a><span class="tag-list-count">9</span></li></ul>
     </div>
   </div>
 
@@ -232,7 +236,7 @@
   <div class="widget">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget-body tagcloud">
-      <a href="/tags/Hexo/" style="font-size: 13px;">Hexo</a> <a href="/tags/ResNet-CNN/" style="font-size: 13px;">ResNet,CNN</a> <a href="/tags/recommended-algorithm/" style="font-size: 14px;">recommended algorithm</a>
+      <a href="/tags/CNN/" style="font-size: 13px;">CNN</a> <a href="/tags/Hexo/" style="font-size: 13px;">Hexo</a> <a href="/tags/ResNet-CNN/" style="font-size: 13px;">ResNet, CNN</a> <a href="/tags/recommended-algorithm/" style="font-size: 14px;">recommended algorithm</a>
     </div>
   </div>
 
@@ -260,7 +264,7 @@
                 
               </p>
               <p class="item-title">
-                <a href="/2023/08/18/Time-complexity-for-CNN/" class="title">Time-complexity-for-CNN</a>
+                <a href="/2023/08/18/Time-complexity-for-CNN/" class="title">Complexity for CNN Models</a>
               </p>
               <p class="item-date">
                 <time datetime="2023-08-18T01:04:27.000Z" itemprop="datePublished">2023-08-18</time>
@@ -376,35 +380,42 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h1 id="Content-Based-Filtering"><a href="#Content-Based-Filtering" class="headerlink" title="Content-Based Filtering"></a>Content-Based Filtering</h1><p>Content-based filtering is a technique used in recommendation systems. It works by suggesting items based on a comparison between the content of the items and a user’s profile. The content of each item is represented as a set of descriptors or terms. If a user has expressed a preference (e.g., by rating or viewing) for a particular item, similar items will be recommended.</p>
-<h2 id="Key-Concepts"><a href="#Key-Concepts" class="headerlink" title="Key Concepts"></a>Key Concepts</h2><h3 id="1-Item-Representation"><a href="#1-Item-Representation" class="headerlink" title="1. Item Representation"></a>1. <strong>Item Representation</strong></h3><p>Every item in the dataset is depicted using descriptors or terms:</p>
+        <h1 id="content-based-filtering"><a class="markdownIt-Anchor" href="#content-based-filtering"></a> Content-Based Filtering</h1>
+<p>Content-based filtering is a technique used in recommendation systems. It works by suggesting items based on a comparison between the content of the items and a user’s profile. The content of each item is represented as a set of descriptors or terms. If a user has expressed a preference (e.g., by rating or viewing) for a particular item, similar items will be recommended.</p>
+<h2 id="key-concepts"><a class="markdownIt-Anchor" href="#key-concepts"></a> Key Concepts</h2>
+<h3 id="1-item-representation"><a class="markdownIt-Anchor" href="#1-item-representation"></a> 1. <strong>Item Representation</strong></h3>
+<p>Every item in the dataset is depicted using descriptors or terms:</p>
 <ul>
 <li><strong>Movies</strong>: Described by attributes like genres, director, lead actors, or plot keywords.</li>
 <li><strong>Books</strong>: Attributes might include the author, publisher, genre, or summary keywords.</li>
 <li><strong>Articles</strong>: Often represented by key terms or topics extracted from the text.</li>
 </ul>
-<h3 id="2-User-Profile"><a href="#2-User-Profile" class="headerlink" title="2. User Profile"></a>2. <strong>User Profile</strong></h3><p>User preferences are portrayed as a vector of weights:</p>
+<h3 id="2-user-profile"><a class="markdownIt-Anchor" href="#2-user-profile"></a> 2. <strong>User Profile</strong></h3>
+<p>User preferences are portrayed as a vector of weights:</p>
 <ul>
 <li>Constructed using items the user has interacted with, such as rated items or items they’ve purchased.</li>
 <li>It can be refined based on explicit feedback like likes or dislikes.</li>
 <li>Continuously updated as user’s interactions evolve.</li>
 </ul>
-<h3 id="3-Recommendation-Score"><a href="#3-Recommendation-Score" class="headerlink" title="3. Recommendation Score"></a>3. <strong>Recommendation Score</strong></h3><p>To suggest items:</p>
+<h3 id="3-recommendation-score"><a class="markdownIt-Anchor" href="#3-recommendation-score"></a> 3. <strong>Recommendation Score</strong></h3>
+<p>To suggest items:</p>
 <ul>
 <li>The system calculates a score reflecting the match between user profile and item descriptors.</li>
 <li>Items are ranked based on this score, with top-ranking items recommended to the user.</li>
 </ul>
-<h2 id="Advantages"><a href="#Advantages" class="headerlink" title="Advantages"></a>Advantages</h2><ol>
+<h2 id="advantages"><a class="markdownIt-Anchor" href="#advantages"></a> Advantages</h2>
+<ol>
 <li><strong>Transparency</strong>: Clear reasons for recommendations based on user’s past interactions.</li>
 <li><strong>No Cold Start</strong>: Capable of recommending new items even before many users have interacted with them.</li>
 <li><strong>Diverse Recommendations</strong>: Not confined to user’s past preferences, offers wider variety.</li>
 </ol>
-<h2 id="Challenges"><a href="#Challenges" class="headerlink" title="Challenges"></a>Challenges</h2><ol>
+<h2 id="challenges"><a class="markdownIt-Anchor" href="#challenges"></a> Challenges</h2>
+<ol>
 <li><strong>Over-specialization</strong>: Strictly recommending similar items might limit user’s exposure to new themes or genres.</li>
 <li><strong>Limited to Item Content</strong>: Recommendations are based solely on item descriptors, missing out on community preferences.</li>
 <li><strong>Complex Profiles</strong>: Accurately capturing diverse tastes of a user can be challenging.</li>
 </ol>
-<hr>
+<hr />
 <p>In practice, to tackle these challenges and offer robust recommendations, many systems merge content-based filtering with other methods like collaborative filtering.</p>
 
       

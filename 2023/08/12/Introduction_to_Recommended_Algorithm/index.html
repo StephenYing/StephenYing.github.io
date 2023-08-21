@@ -18,12 +18,12 @@
   
   
   <title>Introduction to Recommended Algorithm | StephenYing.site</title>
-  <meta name="description" content="Recommendation Algorithm IntroductionA recommendation algorithm, or recommender system, is a software designed to suggest items to users based on various factors. You can find these systems on platfor">
+  <meta name="description" content="Recommendation Algorithm Introduction A recommendation algorithm, or recommender system, is a software designed to suggest items to users based on various factors. You can find these systems on platf">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Introduction to Recommended Algorithm">
 <meta property="og:url" content="http://example.com/2023/08/12/Introduction_to_Recommended_Algorithm/index.html">
 <meta property="og:site_name" content="Stephen.Y">
-<meta property="og:description" content="Recommendation Algorithm IntroductionA recommendation algorithm, or recommender system, is a software designed to suggest items to users based on various factors. You can find these systems on platfor">
+<meta property="og:description" content="Recommendation Algorithm Introduction A recommendation algorithm, or recommender system, is a software designed to suggest items to users based on various factors. You can find these systems on platf">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-08-11T16:34:47.000Z">
 <meta property="article:modified_time" content="2023-08-14T10:33:27.892Z">
@@ -45,7 +45,11 @@
   
   
   
-<meta name="generator" content="Hexo 6.3.0"></head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
 
 
 <body class="main-center" itemscope itemtype="http://schema.org/WebPage">
@@ -222,7 +226,7 @@
   <div class="widget">
     <h3 class="widget-title">Tags</h3>
     <div class="widget-body">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ResNet-CNN/" rel="tag">ResNet,CNN</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/recommended-algorithm/" rel="tag">recommended algorithm</a><span class="tag-list-count">9</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CNN/" rel="tag">CNN</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ResNet-CNN/" rel="tag">ResNet, CNN</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/recommended-algorithm/" rel="tag">recommended algorithm</a><span class="tag-list-count">9</span></li></ul>
     </div>
   </div>
 
@@ -232,7 +236,7 @@
   <div class="widget">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget-body tagcloud">
-      <a href="/tags/Hexo/" style="font-size: 13px;">Hexo</a> <a href="/tags/ResNet-CNN/" style="font-size: 13px;">ResNet,CNN</a> <a href="/tags/recommended-algorithm/" style="font-size: 14px;">recommended algorithm</a>
+      <a href="/tags/CNN/" style="font-size: 13px;">CNN</a> <a href="/tags/Hexo/" style="font-size: 13px;">Hexo</a> <a href="/tags/ResNet-CNN/" style="font-size: 13px;">ResNet, CNN</a> <a href="/tags/recommended-algorithm/" style="font-size: 14px;">recommended algorithm</a>
     </div>
   </div>
 
@@ -260,7 +264,7 @@
                 
               </p>
               <p class="item-title">
-                <a href="/2023/08/18/Time-complexity-for-CNN/" class="title">Time-complexity-for-CNN</a>
+                <a href="/2023/08/18/Time-complexity-for-CNN/" class="title">Complexity for CNN Models</a>
               </p>
               <p class="item-date">
                 <time datetime="2023-08-18T01:04:27.000Z" itemprop="datePublished">2023-08-18</time>
@@ -376,19 +380,26 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h1 id="Recommendation-Algorithm-Introduction"><a href="#Recommendation-Algorithm-Introduction" class="headerlink" title="Recommendation Algorithm Introduction"></a>Recommendation Algorithm Introduction</h1><p>A recommendation algorithm, or recommender system, is a software designed to suggest items to users based on various factors. You can find these systems on platforms like Netflix for movie recommendations, Spotify for songs, and even in online shopping or news feeds.</p>
-<h2 id="Primary-Types-of-Recommendation-Algorithms"><a href="#Primary-Types-of-Recommendation-Algorithms" class="headerlink" title="Primary Types of Recommendation Algorithms:"></a>Primary Types of Recommendation Algorithms:</h2><h3 id="1-Collaborative-Filtering"><a href="#1-Collaborative-Filtering" class="headerlink" title="1. Collaborative Filtering"></a>1. Collaborative Filtering</h3><ul>
-<li><p>Makes predictions about a user’s interest by collecting preference information from many users.</p>
-</li>
-<li><p><strong>Assumption</strong>: If person A and person B agree on one issue, A is likely to have B’s opinion on a different issue.</p>
+        <h1 id="recommendation-algorithm-introduction"><a class="markdownIt-Anchor" href="#recommendation-algorithm-introduction"></a> Recommendation Algorithm Introduction</h1>
+<p>A recommendation algorithm, or recommender system, is a software designed to suggest items to users based on various factors. You can find these systems on platforms like Netflix for movie recommendations, Spotify for songs, and even in online shopping or news feeds.</p>
+<h2 id="primary-types-of-recommendation-algorithms"><a class="markdownIt-Anchor" href="#primary-types-of-recommendation-algorithms"></a> Primary Types of Recommendation Algorithms:</h2>
+<h3 id="1-collaborative-filtering"><a class="markdownIt-Anchor" href="#1-collaborative-filtering"></a> 1. Collaborative Filtering</h3>
 <ul>
-<li><p><strong>User-User Collaborative Filtering</strong>:</p>
+<li>
+<p>Makes predictions about a user’s interest by collecting preference information from many users.</p>
+</li>
+<li>
+<p><strong>Assumption</strong>: If person A and person B agree on one issue, A is likely to have B’s opinion on a different issue.</p>
+<ul>
+<li>
+<p><strong>User-User Collaborative Filtering</strong>:</p>
 <ul>
 <li>Identifies users similar to the queried user.</li>
 <li>Suggests items based on similar users’ preferences.</li>
 </ul>
 </li>
-<li><p><strong>Item-Item Collaborative Filtering</strong>:</p>
+<li>
+<p><strong>Item-Item Collaborative Filtering</strong>:</p>
 <ul>
 <li>Calculates item similarities instead of user similarity.</li>
 <li>If users who buy X also buy Y, then Y might be recommended to someone who buys X.</li>
@@ -397,35 +408,42 @@
 </ul>
 </li>
 </ul>
-<h3 id="2-Content-Based-Filtering"><a href="#2-Content-Based-Filtering" class="headerlink" title="2. Content-Based Filtering"></a>2. Content-Based Filtering</h3><ul>
+<h3 id="2-content-based-filtering"><a class="markdownIt-Anchor" href="#2-content-based-filtering"></a> 2. Content-Based Filtering</h3>
+<ul>
 <li>Uses item features to recommend items similar to what the user likes based on their actions or explicit feedback.</li>
 <li>Example: If a user has watched many action movies, more action movies will be recommended.</li>
 </ul>
-<h3 id="3-Hybrid-Methods"><a href="#3-Hybrid-Methods" class="headerlink" title="3. Hybrid Methods"></a>3. Hybrid Methods</h3><ul>
+<h3 id="3-hybrid-methods"><a class="markdownIt-Anchor" href="#3-hybrid-methods"></a> 3. Hybrid Methods</h3>
+<ul>
 <li>Combines both collaborative and content-based filtering.</li>
-<li>Leverages the strengths and minimizes the weaknesses of both methods.<ul>
+<li>Leverages the strengths and minimizes the weaknesses of both methods.
+<ul>
 <li>Example: Netflix uses a hybrid method considering both user behavior and movie content.</li>
 </ul>
 </li>
 </ul>
-<h2 id="Additional-Techniques"><a href="#Additional-Techniques" class="headerlink" title="Additional Techniques:"></a>Additional Techniques:</h2><ul>
-<li><p><strong>Matrix Factorization (e.g., Singular Value Decomposition)</strong>:</p>
+<h2 id="additional-techniques"><a class="markdownIt-Anchor" href="#additional-techniques"></a> Additional Techniques:</h2>
+<ul>
+<li>
+<p><strong>Matrix Factorization (e.g., Singular Value Decomposition)</strong>:</p>
 <ul>
 <li>Discovers latent features of user-item interactions.</li>
 </ul>
 </li>
-<li><p><strong>Deep Learning</strong>:</p>
+<li>
+<p><strong>Deep Learning</strong>:</p>
 <ul>
 <li>With advancements in neural networks, many platforms now use deep learning for recommendations.</li>
 </ul>
 </li>
-<li><p><strong>Association Rule Mining</strong>:</p>
+<li>
+<p><strong>Association Rule Mining</strong>:</p>
 <ul>
 <li>Useful for market-basket analysis to discover items frequently purchased together.</li>
 </ul>
 </li>
 </ul>
-<hr>
+<hr />
 <p>A successful recommendation system often uses a combination of various algorithms and techniques to offer the best suggestions for its users.</p>
 
       
