@@ -11,35 +11,36 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* DPhil in Engineering Science, University of Oxford, 2025-
+* MSc in Advanced Computer Science, University of Oxford, 2024-2025
+* BSc in Mathematics, University of Bristol, 2021-2024 
+  * Henry Ronald Hasse Finalist Prize (top final-year math student), Lynne Walling Memorial Prize (outstanding student for studies, extra-curricular and university activity)
 
 Work experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* [Academic] **Research Assistant** 2024/04-2024/10
+  * University of Bristol
+  * Research Field: High-dimensional Statistics, Statistical Machine learning
+  * Supervisor: Dr. Song Liu
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* [Industry] **Intern, Video Algorithm Group** 2023/08-2023/11
+  * Agora
+  * Working on semantic segmentation
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
+* [Academic] **Research Assistant** 2023/06-2023/08: 
+  * University of Bristol
+  * Research Field: Probability
+  * Supervisor: Prof. Marton Balazs
+
+
+<!-- Skills
 ======
 * Skill 1
 * Skill 2
   * Sub-skill 2.1
   * Sub-skill 2.2
   * Sub-skill 2.3
-* Skill 3
+* Skill 3 -->
 
 Publications
 ======
@@ -47,11 +48,11 @@ Publications
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-Talks
+<!-- Talks
 ======
   <ul>{% for post in site.talks reversed %}
     {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
+  {% endfor %}</ul> -->
   
 Teaching
 ======
@@ -59,6 +60,6 @@ Teaching
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-Service and leadership
+<!-- Service and leadership
 ======
-* Currently signed in to 43 different slack teams
+* Currently signed in to 43 different slack teams -->
