@@ -1,7 +1,7 @@
 ---
 title: "High-Dimensional Differential Parameter Inference in Exponential Family using Time Score Matching"
 collection: publications
-category: manuscripts
+category: conferences
 permalink: /publication/2025-05-03-high-dimensional-differential-parameter-inference
 excerpt: 'This paper addresses differential inference in time-varying parametric probabilistic models and proposes to directly learn the time derivative of parameters via time score matching.'
 date: 2025-05-03
