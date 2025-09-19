@@ -1,7 +1,7 @@
 ---
 title: "Missing Data Imputation by Reducing Mutual Information with Rectified Flows"
 collection: publications
-category: manuscripts
+category: conferences
 permalink: /publication/2025-missing-data-imputation-rectified-flows
 excerpt: 'This paper introduces a novel iterative method for missing data imputation that sequentially reduces the mutual information between data and their corresponding missing mask.'
 date: 2025-01-01
