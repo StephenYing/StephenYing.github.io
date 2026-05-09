@@ -35,9 +35,9 @@ I am passionate about building physically plausible generative methods that can 
 <span class="anchor" id="educations"></span>
 # Educations
 
-- *2025.10 - now*, DPhil in Engineering Science, The University of Oxford.
-- *2024.09 - 2025.09*, M.Sc. Advanced Computer Science, The University of Oxford.
-- *2021.09 - 2024.06*, B.Sc. Mathematics, The University of Bristol.
+- *2025.10 - now*, DPhil in Engineering Science, University of Oxford.
+- *2024.09 - 2025.09*, M.Sc. Advanced Computer Science, University of Oxford.
+- *2021.09 - 2024.06*, B.Sc. Mathematics, University of Bristol.
 
 <span class="anchor" id="publications"></span>
 # Publications
