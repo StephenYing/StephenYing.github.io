@@ -42,15 +42,15 @@ I am passionate about building physically plausible generative methods that can 
 <span class="anchor" id="publications"></span>
 # Publications
 
-- **Missing data imputation by reducing mutual information with rectified flows**  
-  Jiahao Yu, **Qizhen Ying**, Leyang Wang, Ziyue Jiang, Song Liu.  
-  *Advances in Neural Information Processing Systems (NeurIPS), 2026, Vol. 38, pp. 80324-80352.*  
-  [paper](https://arxiv.org/abs/2505.11749)
-
 - **ActionReasoning: Robot Action Reasoning in 3D Space with LLM for Robotic Brick Stacking**  
   Guangming Wang\*, **Qizhen Ying**\*, Yixiong Jing, Olaf Wysocki, Brian Sheil.  
   *IEEE International Conference on Robotics and Automation (ICRA), 2026.*  
   [paper](https://arxiv.org/abs/2602.21161)
+
+- **Missing data imputation by reducing mutual information with rectified flows**  
+  Jiahao Yu, **Qizhen Ying**, Leyang Wang, Ziyue Jiang, Song Liu.  
+  *Advances in Neural Information Processing Systems (NeurIPS), 2026, Vol. 38, pp. 80324-80352.*  
+  [paper](https://arxiv.org/abs/2505.11749)
 
 - **High-dimensional differential parameter inference in exponential family using time score matching**  
   Daniel James Williams, Leyang Wang, **Qizhen Ying**, Song Liu, Mladen Kolar.  
