@@ -29,8 +29,8 @@ I am passionate about building physically plausible generative methods that can 
 <span class="anchor" id="news"></span>
 # News
 
-- *2026.05*: 🎉 One paper was accepted by **ICML 2026**.
-- *2026.01*: 🎉 One paper was accepted by **ICRA 2026**.
+- *2026.05*: 🎉 One paper was accepted by **ICML 2026**, see you in Seoul!
+- *2026.01*: 🎉 One paper was accepted by **ICRA 2026**, see you in Vienna!
 
 <span class="anchor" id="educations"></span>
 # Educations
