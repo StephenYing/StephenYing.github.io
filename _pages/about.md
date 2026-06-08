@@ -24,6 +24,7 @@ I am a first-year DPhil student at the [Active Vision Lab](https://www.robots.ox
 I am passionate about building physically plausible world models. I believe world models should be developed from both deterministic and generative perspectives, corresponding to physical rules and stochastic noise. Thus effective and stable generative techniques can bridge the gap between simulation and real-world scenarios, and I hope the combination of these models can also learn how the real world evolves over time.
 
 **Research interests:** Physically plausible generative models, World Models, Reinforcement Learning.
+
 **Contact:** [qizhen.ying@eng.ox.ac.uk](mailto:qizhen.ying@eng.ox.ac.uk)
 
 <span class="anchor" id="news"></span>
