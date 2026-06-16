@@ -45,7 +45,13 @@ I am passionate about building physically plausible world models. I believe worl
 
 - **Temporal Difference Learning for Diffusion Models**  
   **Qizhen Ying**, Yangchen Pan, Victor Adrian Prisacariu, Junfeng Wen.  
-  *International Conference on Machine Learning (ICML), 2026.*
+  *International Conference on Machine Learning (ICML), 2026.*  
+  [paper](https://arxiv.org/abs/2606.15048)
+
+- **NEXUS: Neural Energy Fields for Physically Consistent Contact-Rich 3D Object Dynamics**  
+  **Qizhen Ying**, Guangming Wang, Yangchen Pan, Victor Adrian Prisacariu, Yixiong Jing.  
+  *arXiv, 2026.*  
+  [paper](https://arxiv.org/abs/2606.15015)
 
 - **ActionReasoning: Robot Action Reasoning in 3D Space with LLM for Robotic Brick Stacking**  
   Guangming Wang\*, **Qizhen Ying**\*, Yixiong Jing, Olaf Wysocki, Brian Sheil.  
