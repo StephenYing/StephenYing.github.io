@@ -47,18 +47,18 @@ I am passionate about building physically plausible world models. I believe worl
   **Qizhen Ying**, Yangchen Pan, Victor Adrian Prisacariu, Junfeng Wen.  
   *International Conference on Machine Learning (ICML), 2026.*  
 
-- **NEXUS: Neural Energy Fields for Physically Consistent Contact-Rich 3D Object Dynamics** [paper](https://arxiv.org/abs/2606.15015)
+- **NEXUS: Neural Energy Fields for Physically Consistent Contact-Rich 3D Object Dynamics** [paper](https://arxiv.org/abs/2606.15015) 
   **Qizhen Ying**, Guangming Wang, Yangchen Pan, Victor Adrian Prisacariu, Yixiong Jing.  
   *arXiv, 2026.*  
 
 - **ActionReasoning: Robot Action Reasoning in 3D Space with LLM for Robotic Brick Stacking** [paper](https://arxiv.org/abs/2602.21161) 
-  Guangming Wang\*, **Qizhen Ying**\*, Yixiong Jing, Olaf Wysocki, Brian Sheil.  
+  Guangming Wang\*, **Qizhen Ying**\*, Yixiong Jing, Olaf Wysocki, Brian Sheil.   
   *IEEE International Conference on Robotics and Automation (ICRA), 2026.*  
 
-- **Missing data imputation by reducing mutual information with rectified flows** [paper](https://arxiv.org/abs/2505.11749) 
+- **Missing data imputation by reducing mutual information with rectified flows** [paper](https://arxiv.org/abs/2505.11749)  
   Jiahao Yu, **Qizhen Ying**, Leyang Wang, Ziyue Jiang, Song Liu.  
   *Advances in Neural Information Processing Systems (NeurIPS), 2026, Vol. 38, pp. 80324-80352.*  
 
-- **High-dimensional differential parameter inference in exponential family using time score matching** [paper](https://arxiv.org/abs/2410.10637)  
+- **High-dimensional differential parameter inference in exponential family using time score matching** [paper](https://arxiv.org/abs/2410.10637)   
   Daniel James Williams, Leyang Wang, **Qizhen Ying**, Song Liu, Mladen Kolar.  
   *International Conference on Artificial Intelligence and Statistics (AISTATS), 2025, pp. 3493-3501 (PMLR).*  
