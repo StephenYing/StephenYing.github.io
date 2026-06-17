@@ -47,11 +47,11 @@ I am passionate about building physically plausible world models. I believe worl
   **Qizhen Ying**, Yangchen Pan, Victor Adrian Prisacariu, Junfeng Wen.  
   *International Conference on Machine Learning (ICML), 2026.*  
 
-- **NEXUS: Neural Energy Fields for Physically Consistent Contact-Rich 3D Object Dynamics** [paper](https://arxiv.org/abs/2606.15015) 
+- **NEXUS: Neural Energy Fields for Physically Consistent Contact-Rich 3D Object Dynamics** [paper](https://arxiv.org/abs/2606.15015)  
   **Qizhen Ying**, Guangming Wang, Yangchen Pan, Victor Adrian Prisacariu, Yixiong Jing.  
   *arXiv, 2026.*  
 
-- **ActionReasoning: Robot Action Reasoning in 3D Space with LLM for Robotic Brick Stacking** [paper](https://arxiv.org/abs/2602.21161) 
+- **ActionReasoning: Robot Action Reasoning in 3D Space with LLM for Robotic Brick Stacking** [paper](https://arxiv.org/abs/2602.21161)  
   Guangming Wang\*, **Qizhen Ying**\*, Yixiong Jing, Olaf Wysocki, Brian Sheil.   
   *IEEE International Conference on Robotics and Automation (ICRA), 2026.*  
 
