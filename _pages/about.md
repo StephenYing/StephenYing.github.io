@@ -43,7 +43,7 @@ I am passionate about building physically plausible world models. I believe worl
 <span class="anchor" id="publications"></span>
 # Publications
 
-- **Temporal Difference Learning for Diffusion Models** [paper](https://arxiv.org/abs/2606.15048)  
+- **Temporal Difference Learning for Diffusion Models** [paper](https://arxiv.org/abs/2606.15048) | [code](https://github.com/StephenYing/Temporal_Difference_Learning_for_Diffusion_Models)  
   **Qizhen Ying**, Yangchen Pan, Victor Adrian Prisacariu, Junfeng Wen.  
   *International Conference on Machine Learning (ICML), 2026.*  
 
@@ -55,10 +55,10 @@ I am passionate about building physically plausible world models. I believe worl
   Guangming Wang\*, **Qizhen Ying**\*, Yixiong Jing, Olaf Wysocki, Brian Sheil.   
   *IEEE International Conference on Robotics and Automation (ICRA), 2026.*  
 
-- **Missing data imputation by reducing mutual information with rectified flows** [paper](https://arxiv.org/abs/2505.11749)  
+- **Missing data imputation by reducing mutual information with rectified flows** [paper](https://arxiv.org/abs/2505.11749) | [code](https://github.com/yujhml/MIRI-Imputation) | [website](https://yujhml.github.io/projects/MIRI/)  
   Jiahao Yu, **Qizhen Ying**, Leyang Wang, Ziyue Jiang, Song Liu.  
   *Advances in Neural Information Processing Systems (NeurIPS), 2026, Vol. 38, pp. 80324-80352.*  
 
-- **High-dimensional differential parameter inference in exponential family using time score matching** [paper](https://arxiv.org/abs/2410.10637)   
+- **High-dimensional differential parameter inference in exponential family using time score matching** [paper](https://arxiv.org/abs/2410.10637) | [code](https://github.com/Leyangw/tsm)  
   Daniel James Williams, Leyang Wang, **Qizhen Ying**, Song Liu, Mladen Kolar.  
   *International Conference on Artificial Intelligence and Statistics (AISTATS), 2025, pp. 3493-3501 (PMLR).*  
