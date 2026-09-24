@@ -30,6 +30,7 @@ I am passionate about building physically plausible world models. I believe worl
 <span class="anchor" id="news"></span>
 # News
 
+- *2026.09*: 🎉 One paper was accepted by **NeurIPS 2026**, see you in Sydney this December!
 - *2026.05*: 🎉 One paper was accepted by **ICML 2026**, see you in Seoul this July!
 - *2026.01*: 🎉 One paper was accepted by **ICRA 2026**, see you in Vienna this June!
 
@@ -43,13 +44,13 @@ I am passionate about building physically plausible world models. I believe worl
 <span class="anchor" id="publications"></span>
 # Publications
 
+- **NEXUS: Neural Energy Fields for Physically Consistent Contact-Rich 3D Object Dynamics** [paper](https://arxiv.org/abs/2606.15015)  
+  **Qizhen Ying**, Guangming Wang, Yangchen Pan, Victor Adrian Prisacariu, Yixiong Jing.  
+  *Advances in Neural Information Processing Systems (NeurIPS), 2026.*  
+
 - **Temporal Difference Learning for Diffusion Models** [paper](https://arxiv.org/abs/2606.15048) | [code](https://github.com/StephenYing/Temporal_Difference_Learning_for_Diffusion_Models)  
   **Qizhen Ying**, Yangchen Pan, Victor Adrian Prisacariu, Junfeng Wen.  
   *International Conference on Machine Learning (ICML), 2026.*  
-
-- **NEXUS: Neural Energy Fields for Physically Consistent Contact-Rich 3D Object Dynamics** [paper](https://arxiv.org/abs/2606.15015)  
-  **Qizhen Ying**, Guangming Wang, Yangchen Pan, Victor Adrian Prisacariu, Yixiong Jing.  
-  *arXiv, 2026.*  
 
 - **ActionReasoning: Robot Action Reasoning in 3D Space with LLM for Robotic Brick Stacking** [paper](https://arxiv.org/abs/2602.21161)  
   Guangming Wang\*, **Qizhen Ying**\*, Yixiong Jing, Olaf Wysocki, Brian Sheil.   
@@ -57,7 +58,7 @@ I am passionate about building physically plausible world models. I believe worl
 
 - **Missing data imputation by reducing mutual information with rectified flows** [paper](https://arxiv.org/abs/2505.11749) | [code](https://github.com/yujhml/MIRI-Imputation) | [website](https://yujhml.github.io/projects/MIRI/)  
   Jiahao Yu, **Qizhen Ying**, Leyang Wang, Ziyue Jiang, Song Liu.  
-  *Advances in Neural Information Processing Systems (NeurIPS), 2026, Vol. 38, pp. 80324-80352.*  
+  *Advances in Neural Information Processing Systems (NeurIPS), 2025, Vol. 38, pp. 80324-80352.*  
 
 - **High-dimensional differential parameter inference in exponential family using time score matching** [paper](https://arxiv.org/abs/2410.10637) | [code](https://github.com/Leyangw/tsm)  
   Daniel James Williams, Leyang Wang, **Qizhen Ying**, Song Liu, Mladen Kolar.  
